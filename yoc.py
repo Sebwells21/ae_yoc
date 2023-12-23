@@ -37,15 +37,13 @@ def find_optimal_structures(structures):
     return optimal_structures, highest_yield
 
 # Main program execution
-if __name__ == "__main__":
-    num_structures = get_valid_input("How many structures are being compared?: ", int, lambda x: x >= 1)
-    structure_list = get_structure_data(num_structures)
-    optimal_structures, highest_yield = find_optimal_structures(structure_list)
+num_structures = get_valid_input("How many structures are being compared?: ", int, lambda x: x >= 1)
+structure_list = get_structure_data(num_structures)
+optimal_structures, highest_yield = find_optimal_structures(structure_list)
 
-    if optimal_structures:
-        formatted_yield = "{:.4f}".format(highest_yield)
-        optimal_structures_str = ", ".join(optimal_structures)
-        print(f"The optimal structure(s) is/are {optimal_structures_str} with a yield on cost of {formatted_yield}.")
-    else:
-        print("No valid structures were entered.")
-
+if optimal_structures:
+    formatted_yield = "{:.4f}".format(highest_yield)
+    optimal_structures_str = ", ".join(optimal_structures)
+    print(f"The optimal structure(s) is/are {optimal_structures_str} with a yield on cost of {formatted_yield}.")
+else:
+    print("No valid structures were entered.")
