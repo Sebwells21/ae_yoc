@@ -9,7 +9,7 @@ def get_valid_input(prompt, type_func=int, valid_check=lambda x: x > 0):
         print("Invalid input, please enter a valid number.")
 
 def get_structure_data(num_structures):
-    for _ in range(num_structures):
+    for i in range(num_structures):
         name = input("Structure Name: ").strip()
         production_income = get_valid_input("Production Income: ")
         cost = get_valid_input("Cost: ", valid_check=lambda x: x > 0)
