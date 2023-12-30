@@ -29,7 +29,6 @@ def find_optimal_structures(structures):
 
 num_structures = get_valid_input("How many structures are being compared?: ", valid_check=lambda x: x >= 1)
 optimal_structures, highest_yield = find_optimal_structures(get_structure_data(num_structures))
-
 if optimal_structures:
     formatted_yield = "{:.4f}".format(highest_yield)
     optimal_structures_str = ", ".join(optimal_structures)
